@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>🐾 > 햄버거 버튼</title>
+    <link href="https://fonts.googleapis.com/css?family=Jua|Noto+Sans+KR&display=swap" rel="stylesheet">
+    <style type="text/css">
+        body, a, div, p, h1{
+            margin:0px;
+            padding:0px;
+        }
+        body{
+            background-color:#ddd;
+            font-family: 'Noto Sans KR', sans-serif;
+        }
+        header{
+            width:100%;
+            height:150px;
+            margin:50px auto;
+            margin-bottom:50px;
+        }
+        header a{
+            margin:0px auto;
+            display:block;
+            width:150px;
+            height:150px;
+            border-radius: 45px;
+            background: linear-gradient(145deg, #c7c7c7, #ececec);
+            box-shadow:  10px 10px 10px #bcbcbc, 
+                         -10px -10px 10px #fefefe;
+        }
+        header a:active{
+            box-shadow: inset 10px 10px 10px #bcbcbc, 
+                        inset -10px -10px 10px #fefefe;
+        }
+        div#text{
+            margin:0px auto;
+            width:70%;
+            max-width:720px;
+            color:#444;
+
+        }
+        div#text>h1{
+            margin:0px auto;
+            width:70%;
+            height:35px;
+            font:normal 32px "Jua";
+            text-align:center;
+            margin-bottom:30px;
+        }
+        div#ham{
+            width:250px;
+            height:250px;
+            position:absolute;
+            margin-top:80px;
+            left:50%;
+            margin-left:-125px;
+            transition:transform 0.3s ease-out 0.8s;
+        }
+        div#ham span{
+            width:250px;
+            height:50px;
+            background-color:#444;
+            display:block;
+            position:absolute;
+            border-radius:10px;
+            transition-duration:0.5s;
+        }
+        .bar01{
+            top:0px;
+            transition:all;
+            -wedkit-transition:all;
+            -moz-transition:all;
+            transition-delay:0.3s;
+        }
+        .bar02{
+            top:100px;
+            transition-property:all;
+        }
+        .bar03{
+            top:200px;
+            transition-delay:0.3s;
+        }
+        div#ham:hover{ /*변화되는 값만 넣었음*/
+            transform:rotate(45deg);
+            -webkit-transform:rotate(45deg);
+            -moz-transform:rotate(45deg);
+        }
+        div#ham:hover .bar01{
+            transform:translatey(100px);
+            -webkit-transform:translatey(100px);
+            -moz-transform:translatey(100px);
+        }
+        div#ham:hover .bar02{
+            transform:scaleX(0);
+            -webkit-transform:scaleX(0);
+            -moz-transform:scaleX(0);
+        }
+        div#ham:hover .bar03{
+            transform:rotate(90deg) translatex(-100px);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="index.html"><img src="home.png"></a>
+    </header>
+    <div id="text">
+        <h1>햄버거 버튼</h1>
+        <p>
+            햄버거 버튼입니다. PC화면에서는 마우스를 대면 돌아가고 모바일에서는 누르면 돌아갑니다. translate와 transform을 이용해서 만들었습니다.
+        </p>
+    </div>
+    <div id="ham">
+        <span class="bar01"></span>
+        <span class="bar02"></span>
+        <span class="bar03"></span>
+    </div>
+</body>
+</html>
